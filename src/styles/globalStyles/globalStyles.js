@@ -1,16 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
-const GlobalStyles = createGlobalStyle`
-  @import url('${(props) => props.theme.font.fontSource}');
+const GlobalStyles = createGlobalStyle`  
   ${normalize}
-
-
+ 
   body{   
     background-color: ${(props) => props.theme.colors.primary.midnightGreen};
     font-size: 18px;
     line-height: 28px;
-    font-family: ${(props) => props.theme.font.fontFamily};
+    font-family: 'Livvic', sans-serif;
     font-weight:  ${(props) => props.theme.font.semiBold};
     color: ${(props) => props.theme.colors.primary.white};
     
@@ -48,6 +46,10 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primary.white};
+  }
+
+  .text---highlight {
+    color: ${(props) => props.theme.colors.primary.lightCoral};
   }
 
   .text---small {

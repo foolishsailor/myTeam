@@ -16,6 +16,7 @@ const colors = {
 const font = {
   fontSource:
     "https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap",
+
   fontFamily: "Livvic, sans-serif",
   bold: 700,
   semiBold: 600,

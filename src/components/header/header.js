@@ -1,18 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import Header__Title from "./header__title";
-import Header__Content from "./header__content";
+import HeaderTitle from "./headerTitle";
+import HeaderContent from "./headerContent";
 
 const StyledHeader = styled.div`
-  padding: 40px;
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: ${({ large }) => (large ? "250px" : "120px")};
 `;
 
-const Header = ({ theme, title, content, children, ...props }) => {
+const Header = ({
+  theme,
+  title,
+  content,
+  large,
+  highlight,
+  children,
+  ...props
+}) => {
   return (
-    <StyledHeader>
-      <Header__Title title={title} />
-      <Header__Content content={content} />
+    <StyledHeader large={large}>
+      <HeaderTitle large={large}>{title}</HeaderTitle>
+      <HeaderContent highlight={highlight}>{content}</HeaderContent>
       {children}
     </StyledHeader>
   );

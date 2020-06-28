@@ -16,7 +16,9 @@ const NavBar = () => {
           <Link to='/about'>about</Link>
         </NavItems>
       </Nav>
-      <Button style={buttonStyle}>contact us</Button>
+      <Link to='/contact'>
+        <Button style={buttonStyle}>contact us</Button>
+      </Link>
     </Container>
   );
 };
@@ -34,7 +36,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 165px;
+  margin-bottom: 165px;
   width: 100%;
 `;
 
