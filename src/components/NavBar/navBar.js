@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import myTeamLogo from "../../assets/logo.svg";
+import Button from "../button";
 
 const NavBar = () => {
   return (
     <Container>
       <Logo as={Link} to='/' />
-      <Nav>
+      <Nav style={navStyle}>
         <NavItems>
           <Link to='/home'>home</Link>
         </NavItems>
@@ -15,8 +16,17 @@ const NavBar = () => {
           <Link to='/about'>about</Link>
         </NavItems>
       </Nav>
+      <Button style={buttonStyle}>contact us</Button>
     </Container>
   );
+};
+
+const navStyle = {
+  flex: 1,
+};
+
+const buttonStyle = {
+  alignSelf: "flex-end",
 };
 
 const Container = styled.div`
