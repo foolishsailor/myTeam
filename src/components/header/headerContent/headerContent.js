@@ -23,8 +23,8 @@ const StyledBorderDiv = styled.div`
     background-color: ${({ theme, highlight }) =>
       highlight
         ? highlight === "primary"
-          ? theme.colors.secondary.raptureBlue
-          : theme.colors.primary.lightCoral
+          ? theme.colors.raptureBlue
+          : theme.colors.lightCoral
         : "transparent"};
   }
 `;

@@ -5,12 +5,12 @@ const GlobalStyles = createGlobalStyle`
   ${normalize}
  
   body{   
-    background-color: ${(props) => props.theme.colors.primary.midnightGreen};
+    background-color: ${(props) => props.theme.colors.midnightGreen};
     font-size: 18px;
     line-height: 28px;
     font-family: 'Livvic', sans-serif;
     font-weight:  ${(props) => props.theme.font.semiBold};
-    color: ${(props) => props.theme.colors.primary.white};
+    color: ${(props) => props.theme.colors.white};
     
   }
 
@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: ${(props) => props.theme.font.bold};
     font-size: 48px;
     line-height: 48px;
+    margin: 0px;
 
     &.small {
       font-size: 32px;
@@ -50,11 +51,11 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.colors.primary.white};
+    color: ${(props) => props.theme.colors.white};
   }
 
   .text---highlight {
-    color: ${(props) => props.theme.colors.primary.lightCoral};
+    color: ${(props) => props.theme.colors.lightCoral};
   }
 
   .text---small {

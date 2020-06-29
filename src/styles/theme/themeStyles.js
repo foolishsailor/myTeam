@@ -1,16 +1,12 @@
 const colors = {
-  primary: {
-    midnightGreen: "#014E56",
-    lightCoral: "#F67E7E",
-    white: "#FFFFFF",
-  },
-  secondary: {
-    raptureBlue: "#79C8C7",
-    policeBlue: "#2C6269",
-    deepJungleGreen: "#004047",
-    sacStateGreen: "#012F34",
-    darkGreen: "#002529",
-  },
+  midnightGreen: "#014E56",
+  lightCoral: "#F67E7E",
+  white: "#FFFFFF",
+  raptureBlue: "#79C8C7",
+  policeBlue: "#2C6269",
+  deepJungleGreen: "#004047",
+  sacStateGreen: "#012F34",
+  darkGreen: "#002529",
 };
 
 const font = {

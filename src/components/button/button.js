@@ -2,16 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  border: solid 1px ${(props) => props.theme.colors.primary.white};
+  border: solid 1px
+    ${({ theme, variant }) =>
+      variant ? theme.colors[variant] : theme.colors.white};
   border-radius: 50px;
   background-color: transparent;
-  color: ${(props) => props.theme.colors.primary.white};
+  color: ${({ theme, variant }) =>
+    variant ? theme.colors[variant] : theme.colors.white};
   padding: 15px 30px;
 `;
 
-const Button = ({ active, outline, children, theme, ...props }) => {
+const Button = ({ active, outline, variant, children, theme, ...props }) => {
   return (
-    <StyledButton active={active} outline={outline}>
+    <StyledButton active={active} variant={variant} outline={outline}>
       {children}
     </StyledButton>
   );

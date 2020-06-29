@@ -26,7 +26,8 @@ yarn-error.log*
 #######################################
 ## Please do not remove - thanks! 🙂 ##
 #######################################
-/design_system/
+/design_system/jpegs/
+/design_system/sketch/
 
 # Avoid accidental Sketch file upload 
 #######################################
