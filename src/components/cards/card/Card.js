@@ -3,20 +3,14 @@ import styled from "styled-components";
 
 const StyledHeaderContent = styled.div`
   position: relative;
-  flex: 1;
-  height: 100%;
-`;
-
-const StyledBorderDiv = styled.div`
-  position: relative;
-  width: 0;
-  height: 0;
-  align-self: flex-start;
+  display: flex;
+  flex: 1 1;
+  align-self: stretch;
 
   &:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     height: 4px;
     width: 50px;
@@ -29,21 +23,13 @@ const StyledBorderDiv = styled.div`
   }
 `;
 
-const StyledP = styled.p`
-  margin: 0;
-  margin-top: 40px;
-`;
-
-const Header__Content = ({ children, highlight, theme, ...props }) => {
+const Card = ({ children, highlight, theme, style, ...props }) => {
   console.log("highlight", highlight, highlight ? "ture" : "false");
   return (
-    <>
-      <StyledBorderDiv highlight={highlight} />
-      <StyledHeaderContent>
-        <StyledP>{children}</StyledP>
-      </StyledHeaderContent>
-    </>
+    <StyledHeaderContent style={style} highlight={highlight}>
+      {children}
+    </StyledHeaderContent>
   );
 };
 
-export default Header__Content;
+export default Card;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderTitle from "./headerTitle";
-import HeaderContent from "./headerContent";
+import Card from "../cards/card";
 
 const StyledHeader = styled.div`
   position: relative;
@@ -24,7 +24,7 @@ const Header = ({
   return (
     <StyledHeader large={large}>
       <HeaderTitle large={large}>{title}</HeaderTitle>
-      <HeaderContent highlight={highlight}>{content}</HeaderContent>
+      <Card highlight={highlight}>{content}</Card>
       {children}
     </StyledHeader>
   );
