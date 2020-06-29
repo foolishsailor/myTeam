@@ -22,7 +22,7 @@ const NavList = styled.ul`
   }
 `;
 
-const nav = ({ inline }) => {
+const nav = ({ theme, inline }) => {
   return (
     <Container inline={inline}>
       <Link

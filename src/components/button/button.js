@@ -10,6 +10,15 @@ const StyledButton = styled.button`
   color: ${({ theme, variant }) =>
     variant ? theme.colors[variant] : theme.colors.white};
   padding: 15px 30px;
+  transition: all 200ms;
+
+  &:hover {
+    background-color: ${({ theme, variant }) =>
+      variant ? theme.colors.sacStateGreen : theme.colors.white};
+
+    color: ${({ theme, variant }) =>
+      variant ? theme.colors.white : theme.colors.midnightGreen};
+  }
 `;
 
 const Button = ({ active, outline, variant, children, theme, ...props }) => {

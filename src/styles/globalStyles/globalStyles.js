@@ -52,6 +52,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.white};
+    transition: all 200ms;
+    &:hover {
+      color: ${({ theme }) => theme.colors.lightCoral};
+    }
+  
   }
 
   .text---highlight {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/header";
+import Bottom from "../components/bottom";
 import leftIcon from "../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../assets/bg-pattern-home-2.svg";
 
@@ -40,10 +41,13 @@ const StyledBottomIcon = styled.div`
 
 const Home = () => {
   return (
-    <Header large title={<Title />} content={content} highlight='primary'>
-      <StyledLeftIcon />
-      <StyledBottomIcon />
-    </Header>
+    <>
+      <Header large title={<Title />} content={content} highlight='primary'>
+        <StyledLeftIcon />
+        <StyledBottomIcon />
+      </Header>
+      <Bottom />
+    </>
   );
 };
 

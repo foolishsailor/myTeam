@@ -1,30 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Nav from "../nav";
-import Button from "../button";
-import BackgroundImage from "../backgroundImage";
 import facebookIcon from "../../assets/icon-facebook.svg";
 import twitterIcon from "../../assets/icon-twitter.svg";
 import pinterest from "../../assets/icon-pinterest.svg";
 import {
-  TopContainer,
   BottomContainer,
   AddressDiv,
   SocialDiv,
   SocialImageList,
+  SocialImage,
 } from "./footerStyles";
 
 const imageList = [
-  { link: "", url: facebookIcon },
-  { link: "", url: twitterIcon },
-  { link: "", url: pinterest },
+  { link: "", url: facebookIcon, alt: "Facebook" },
+  { link: "", url: twitterIcon, alt: "Twitter" },
+  { link: "", url: pinterest, alt: "Pinterest" },
 ];
 
 const SocialImages = imageList.map((item, i) => {
   return (
     <Link to={item.link} style={{ marginRight: 16 }}>
-      <BackgroundImage key={i} width={24} height={24} url={item.url} />
+      <SocialImage
+        type='image/svg+xml'
+        key={i}
+        width={24}
+        height={24}
+        data={item.url}
+      >
+        {item.alt}
+      </SocialImage>
     </Link>
   );
 });
@@ -33,10 +38,6 @@ const Footer = ({ theme, ...props }) => {
   console.log("trigger");
   return (
     <>
-      <TopContainer>
-        <h2>Ready to get started?</h2>
-        <Button variant='sacStateGreen'>contact us</Button>
-      </TopContainer>
       <BottomContainer>
         <Nav />
         <AddressDiv className='text---small'>

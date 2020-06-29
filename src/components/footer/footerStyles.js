@@ -8,14 +8,6 @@ const BottomContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.darkGreen};
 `;
 
-const TopContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 76px 230px;
-  background-color: ${({ theme }) => theme.colors.lightCoral};
-  color: ${({ theme }) => theme.colors.sacStateGreen};
-`;
-
 const AddressDiv = styled.div`
   opacity: 0.6;
   flex: 1;
@@ -32,10 +24,11 @@ const SocialImageList = styled.div`
   margin-bottom: 50px;
 `;
 
-export {
-  TopContainer,
-  BottomContainer,
-  AddressDiv,
-  SocialDiv,
-  SocialImageList,
-};
+const SocialImage = styled.object`
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(25%) saturate(7485%)
+      hue-rotate(317deg) brightness(114%) contrast(93%);
+  }
+`;
+
+export { BottomContainer, AddressDiv, SocialDiv, SocialImageList, SocialImage };
