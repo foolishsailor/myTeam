@@ -2,20 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import myTeamLogo from "../../assets/logo.svg";
+import BackgroundImage from "../backgroundImage";
 
 const Container = styled.div`
   display: flex;
   ${({ inline }) =>
-    inline ? "flex-direction: row; flex: 1;" : "flex-direction: column;"};
-`;
-
-const Logo = styled.div`
-  width: 160px;
-  height: 40px;
-  background-image: url(${myTeamLogo});
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 80px;
+    inline ? "flex-direction: row; flex: 1;" : "flex-direction: column; "};
 `;
 
 const NavItems = styled.li`
@@ -33,10 +25,16 @@ const NavList = styled.ul`
 const nav = ({ inline }) => {
   return (
     <Container inline={inline}>
-      <Logo as={Link} to='/' />
+      <Link
+        style={{ marginRight: "80px", marginBottom: inline ? 0 : "25px" }}
+        to='/'
+      >
+        <BackgroundImage width={160} height={40} url={myTeamLogo} />
+      </Link>
+
       <NavList>
         <NavItems>
-          <Link to='/home'>home</Link>
+          <Link to='/'>home</Link>
         </NavItems>
         <NavItems>
           <Link to='/about'>about</Link>

@@ -1,8 +1,13 @@
 import React from "react";
-import Nav from "../nav";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Nav from "../nav";
+import BackgroundImage from "../backgroundImage";
+import facebookIcon from "../../assets/icon-facebook.svg";
+import twitterIcon from "../../assets/icon-twitter.svg";
+import pinterest from "../../assets/icon-pinterest.svg";
 
-const Container = styled.div`
+const BottomContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -17,18 +22,33 @@ const AddressDiv = styled.div`
 
 const SocialDiv = styled.div`
   align-self: flex-end;
-  opacity: 0.6;
+  text-align: right;
 `;
 
-const imageList = [{ link: "", image: "" }];
+const SocialImageList = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+`;
+
+const imageList = [
+  { link: "", url: facebookIcon },
+  { link: "", url: twitterIcon },
+  { link: "", url: pinterest },
+];
 
 const SocialImages = imageList.map((item, i) => {
-  return <div></div>;
+  return (
+    <Link to={item.link} style={{ marginRight: 16 }}>
+      <BackgroundImage key={i} width={24} height={24} url={item.url} />
+    </Link>
+  );
 });
 
 const Footer = ({ theme, ...props }) => {
+  console.log("trigger");
   return (
-    <Container>
+    <BottomContainer>
       <Nav />
       <AddressDiv className='text---small'>
         987 Hillcrest Lane
@@ -40,9 +60,12 @@ const Footer = ({ theme, ...props }) => {
         Call Us: 949-833-7432
       </AddressDiv>
       <SocialDiv>
-        <p className='text---small'>Copyright 2020, All Rights Reserved</p>
+        <SocialImageList>{SocialImages}</SocialImageList>
+        <span style={{ opacity: 0.6 }} className='text---small'>
+          Copyright 2020, All Rights Reserved
+        </span>
       </SocialDiv>
-    </Container>
+    </BottomContainer>
   );
 };
 

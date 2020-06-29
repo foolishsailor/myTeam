@@ -1,27 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import BackgroundImage from "../backgroundImage";
 
 const ListItem = styled.li`
   display: flex;
   margin-bottom: 8px;
 `;
 
-const ListImage = styled.div`
-  width: 72px;
-  height: 72px;
-  margin-right: 20px;
-  background-image: url(${({ imageUrl }) => imageUrl});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-`;
-
-const List = ({ list, theme }) => {
+const List = ({ list }) => {
   const ImageList = list.map((item, i) => {
     console.log("image", item.image);
     return (
       <ListItem key={i}>
-        <ListImage imageUrl={item.image} />
+        <div style={{ marginRight: 20 }}>
+          <BackgroundImage width={72} height={72} url={item.image} />
+        </div>
         <h3>{item.text}</h3>
       </ListItem>
     );
