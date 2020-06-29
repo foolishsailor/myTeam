@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "../components/section";
-import Card from "../components/cards/card";
-import rightIcon from "../assets/bg-pattern-about-1-mobile-nav-1.svg";
+import Section from "../../components/section";
+import Card from "../../components/cards/card";
+import Directors from "./directors";
+import rightIcon from "../../assets/bg-pattern-about-1-mobile-nav-1.svg";
 
 const RightIcon = styled.div`
   position: absolute;
-  right: -265px;
+  right: -100px;
   bottom: 0;
   height: 200px;
   width: 200px;
@@ -31,13 +32,21 @@ const StyledMainTitle = styled.h2`
 
 const StyledMain = styled(Section)`
   padding: 140px 165px;
+  flex-wrap: wrap;
+`;
+
+const StyledDirectorContainer = styled.div`
+  display: flex;
+
+  flex-wrap: wrap;
 `;
 
 const About = () => {
   return (
     <>
-      <Section>
-        <Card>
+      <Section inline>
+        <RightIcon />
+        <Card style={{ flexGrow: 0.5 }}>
           <StyledH1>About</StyledH1>
         </Card>
         <Card highlight>
@@ -48,10 +57,10 @@ const About = () => {
             best products and experiences. We’ll bring those teams to you.
           </StyledHeaderContent>
         </Card>
-        <RightIcon />
       </Section>
-      <StyledMain variant={"deepJungleGreen"}>
+      <StyledMain inline variant={"deepJungleGreen"}>
         <StyledMainTitle>Meet the directors</StyledMainTitle>
+        <StyledDirectorContainer>{Directors}</StyledDirectorContainer>
       </StyledMain>
     </>
   );

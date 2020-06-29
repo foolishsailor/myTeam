@@ -37,7 +37,7 @@ const StyledBottomIcon = styled.div`
 const Home = () => {
   return (
     <>
-      <Section large>
+      <Section large inline>
         <Card style={{ marginRight: 140 }}>
           <StyledH1 className='large'>
             Find the best <span className='text---highlight'>talent</span>

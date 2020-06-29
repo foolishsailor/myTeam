@@ -1,16 +1,13 @@
-import React from "react";
 import styled from "styled-components";
 
-const ImageDiv = styled.div`
+const BackgroundImage = styled.div`
   width: ${({ width }) => width + "px"};
   height: ${({ height }) => height + "px"};
+  border-radius: ${({ round, width, height }) =>
+    round ? `${Math.max(width, height)}px` : 0};
   background-image: url(${({ url }) => url});
   background-repeat: no-repeat;
   background-size: contain;
 `;
-
-const BackgroundImage = ({ width, height, url }) => {
-  return <ImageDiv width={width} height={height} url={url}></ImageDiv>;
-};
 
 export default BackgroundImage;

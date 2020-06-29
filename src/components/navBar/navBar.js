@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 70px 165px 165px 165px;
+  margin: 70px 165px 0 165px;
 `;
 
 const NavBar = () => {

@@ -20,14 +20,8 @@ const imageList = [
 
 const SocialImages = imageList.map((item, i) => {
   return (
-    <Link to={item.link} style={{ marginRight: 16 }}>
-      <SocialImage
-        type='image/svg+xml'
-        key={i}
-        width={24}
-        height={24}
-        data={item.url}
-      >
+    <Link key={i} to={item.link} style={{ marginRight: 16 }}>
+      <SocialImage type='image/svg+xml' width={24} height={24} data={item.url}>
         {item.alt}
       </SocialImage>
     </Link>

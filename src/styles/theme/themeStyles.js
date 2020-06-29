@@ -16,6 +16,10 @@ const font = {
   fontFamily: "Livvic, sans-serif",
   bold: 700,
   semiBold: 600,
+  textSmall: {
+    fontSize: "15px",
+    lineHeight: "25px",
+  },
 };
 
 const layout = {
