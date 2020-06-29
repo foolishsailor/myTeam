@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledHeaderContent = styled.div`
+const StyledCard = styled.div`
   position: relative;
   display: flex;
+  flex-direction: ${({ inline }) => (inline ? "column" : "row")};
   flex: 1 1;
   align-self: stretch;
 
@@ -23,12 +24,12 @@ const StyledHeaderContent = styled.div`
   }
 `;
 
-const Card = ({ children, highlight, theme, style, ...props }) => {
+const Card = ({ children, highlight, theme, inline, style, ...props }) => {
   console.log("highlight", highlight, highlight ? "ture" : "false");
   return (
-    <StyledHeaderContent style={style} highlight={highlight}>
+    <StyledCard style={style} inline={inline} highlight={highlight}>
       {children}
-    </StyledHeaderContent>
+    </StyledCard>
   );
 };
 

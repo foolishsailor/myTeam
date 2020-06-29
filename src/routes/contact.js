@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../components/header";
+import Section from "../components/section";
+import Card from "../components/cards/card";
 import List from "../components/list";
 
 import talent from "../assets/icon-person.svg";
@@ -12,18 +13,17 @@ const list = [
   { image: chart, text: "How we help drive innovation" },
 ];
 
-const Title = () => {
-  return (
-    <>
-      <h1>Contact</h1>
-      <h2 className='small text---highlight'>Ask us about</h2>
-      <List list={list} />
-    </>
-  );
-};
-
 const Contact = () => {
-  return <Header title={<Title />}></Header>;
+  return (
+    <Section>
+      <Card inline>
+        <h1>Contact</h1>
+        <h2 className='small text---highlight'>Ask us about</h2>
+        <List list={list} />
+      </Card>
+      <Card>Form</Card>
+    </Section>
+  );
 };
 
 export default Contact;
