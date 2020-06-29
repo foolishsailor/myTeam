@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyles from "../styles/globalStyles";
 import Theme from "../styles/theme";
 import Container from "./container";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/navBar";
+import Footer from "../components/footer";
 import Home from "../routes/home";
 import Contact from "../routes/contact";
 import About from "../routes/about";
@@ -20,6 +21,7 @@ const App = () => {
             <Route path='/about' component={About} />
             <Route path='/' component={Home} />
           </Switch>
+          <Footer />
         </Container>
       </Theme>
     </Router>

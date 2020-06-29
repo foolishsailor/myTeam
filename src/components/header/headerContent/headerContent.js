@@ -22,8 +22,10 @@ const StyledBorderDiv = styled.div`
     width: 50px;
     background-color: ${({ theme, highlight }) =>
       highlight
-        ? theme.colors.primary.lightCoral
-        : theme.colors.secondary.raptureBlue};
+        ? highlight === "primary"
+          ? theme.colors.secondary.raptureBlue
+          : theme.colors.primary.lightCoral
+        : "transparent"};
   }
 `;
 
@@ -33,9 +35,10 @@ const StyledP = styled.p`
 `;
 
 const Header__Content = ({ children, highlight, theme, ...props }) => {
+  console.log("highlight", highlight, highlight ? "ture" : "false");
   return (
     <>
-      <StyledBorderDiv highlight />
+      <StyledBorderDiv highlight={highlight} />
       <StyledHeaderContent>
         <StyledP>{children}</StyledP>
       </StyledHeaderContent>

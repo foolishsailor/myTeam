@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: ${({ large }) => (large ? "250px" : "120px")};
+  margin: 0 165px;
 `;
 
 const Header = ({

@@ -40,7 +40,7 @@ const StyledBottomIcon = styled.div`
 
 const Home = () => {
   return (
-    <Header large title={<Title />} content={content}>
+    <Header large title={<Title />} content={content} highlight='primary'>
       <StyledLeftIcon />
       <StyledBottomIcon />
     </Header>

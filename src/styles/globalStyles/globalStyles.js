@@ -29,6 +29,11 @@ const GlobalStyles = createGlobalStyle`
     font-weight: ${(props) => props.theme.font.bold};
     font-size: 48px;
     line-height: 48px;
+
+    &.small {
+      font-size: 32px;
+      line-height: 48px;
+    }
   }
 
   h3 {
