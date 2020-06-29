@@ -1,4 +1,4 @@
-# Responsive Design, React and Styled Components 
+# Responsive Design with React and Styled Components 
 
 *** In Process ***
 
