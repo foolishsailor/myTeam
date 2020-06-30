@@ -49,7 +49,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px 55px;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
   transition: all 200ms;

@@ -28,6 +28,7 @@ const StyledHeaderContent = styled.div`
 const StyledMainTitle = styled.h2`
   width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 `;
 
 const StyledMain = styled(Section)`
