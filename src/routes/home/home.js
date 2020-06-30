@@ -1,34 +1,34 @@
 import React from "react";
 import {
   StyledCard,
-  StyledH1,
-  StyledContent,
+  StyledHeader,
+  StyledCardTitle,
   StyledLeftIcon,
   StyledBottomIcon,
 } from "./homeStyles";
-import Section from "../../components/section";
 import Card from "../../components/cards/card";
+import CardContent from "../../components/cards/card/cardContent";
 import Bottom from "../../components/bottom";
 
 const Home = () => {
   return (
     <>
-      <Section large inline>
+      <StyledHeader inline>
         <StyledCard>
-          <StyledH1>
+          <StyledCardTitle>
             Find the best <span className='text---highlight'>talent</span>
-          </StyledH1>
+          </StyledCardTitle>
         </StyledCard>
         <Card highlight='primary'>
-          <StyledContent>
+          <CardContent>
             Finding the right people and building high performing teams can be
             hard. Most companies aren’t tapping into the abundance of global
             talent. We’re about to change that.
-          </StyledContent>
+          </CardContent>
         </Card>
         <StyledLeftIcon />
         <StyledBottomIcon />
-      </Section>
+      </StyledHeader>
       <Bottom />
     </>
   );

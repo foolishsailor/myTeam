@@ -7,6 +7,11 @@ const RightIcon = styled(BackgroundImage)`
   position: absolute;
   right: -100px;
   bottom: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    right: -100px;
+    bottom: -100px;
+  }
 `;
 
 const DirectorLeftIcon = styled(BackgroundImage)`
@@ -25,16 +30,6 @@ const ClientsLeftIcon = styled(BackgroundImage)`
   position: absolute;
   left: 0;
   top: 0;
-`;
-
-const HeaderTitle = styled.h1`
-  margin: 0;
-  padding-top: 20px;
-`;
-
-const HeaderContent = styled.div`
-  align-self: flex-end;
-  margin-top: 40px;
 `;
 
 const Title = styled.h2`
@@ -57,8 +52,6 @@ export {
   DirectorLeftIcon,
   DirectorsRightIcon,
   ClientsLeftIcon,
-  HeaderTitle,
-  HeaderContent,
   Title,
   Main,
   ClientContainer,

@@ -4,21 +4,20 @@ const Section = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "row" : "column")};
-  padding-bottom: ${({ large }) => (large ? "250px" : "120px")};
-  padding: 140px 165px;
+  padding: 110px 165px 140px 165px;
   background-color: ${({ variant, theme }) =>
     variant ? theme.colors[variant] : theme.colors.midnightGreen};
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
     flex-direction: column;
     justify-content: center;
-    margin-right: ${({ theme }) => theme.layout.marginWidth.tablet};
-    margin-left: ${({ theme }) => theme.layout.marginWidth.tablet};
+    padding-right: ${({ theme }) => theme.layout.paddingWidth.tablet};
+    padding-left: ${({ theme }) => theme.layout.paddingWidth.tablet};
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    margin-right: ${({ theme }) => theme.layout.marginWidth.mobile};
-    margin-left: ${({ theme }) => theme.layout.marginWidth.mobile};
+    padding-right: ${({ theme }) => theme.layout.paddingWidth.mobile};
+    padding-left: ${({ theme }) => theme.layout.paddingWidth.mobile};
   }
 `;
 

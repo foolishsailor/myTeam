@@ -18,20 +18,20 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 70px 165px 0 165px;
+  padding: 70px 165px 0 165px;
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    margin-right: ${({ theme }) => theme.layout.marginWidth.tablet};
-    margin-left: ${({ theme }) => theme.layout.marginWidth.tablet};
-    margin-top: 70px;
-    margin-bottom: 0;
+    padding-right: ${({ theme }) => theme.layout.paddingWidth.tablet};
+    padding-left: ${({ theme }) => theme.layout.paddingWidth.tablet};
+    padding-top: 70px;
+    padding-bottom: 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    margin-right: ${({ theme }) => theme.layout.marginWidth.mobile};
-    margin-left: ${({ theme }) => theme.layout.marginWidth.mobile};
-    margin-top: 70px;
-    margin-bottom: 0;
+    padding-right: ${({ theme }) => theme.layout.paddingWidth.mobile};
+    padding-left: ${({ theme }) => theme.layout.paddingWidth.mobile};
+    padding-top: 70px;
+    padding-bottom: 0;
   }
 `;
 

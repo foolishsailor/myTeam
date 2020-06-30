@@ -1,36 +1,26 @@
 import styled from "styled-components";
 import Card from "../../components/cards/card";
+import Header from "../../components/header";
+import CardTitle from "../../components/cards/card/cardTitle";
 import leftIcon from "../../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../../assets/bg-pattern-home-2.svg";
 
 const StyledCard = styled(Card)`
   margin-right: 140px;
+`;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    margin-right: 0;
+const StyledHeader = styled(Header)`
+  padding-bottom: 250px !important;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    padding-bottom: 200px !important;
   }
 `;
 
-const StyledH1 = styled.h1`
-  margin: 0;
-  font-size: ${({ theme }) => theme.font.h1.large.fontSize};
-  line-height: ${({ theme }) => theme.font.h1.large.lineHeight};
-
-  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.h1.fontSize};
-    line-height: ${({ theme }) => theme.font.h1.lineHeight};
-    text-align: center;
-  }
-`;
-
-const StyledContent = styled.div`
-  align-self: flex-end;
-
-  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    margin-top: 24px;
-    text-align: center;
-    font-size: ${({ theme }) => theme.font.body.small.fontSize};
-    line-height: ${({ theme }) => theme.font.body.small.lineHeight};
+const StyledCardTitle = styled(CardTitle)`
+  @media (min-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    font-size: ${({ theme }) => theme.font.h1.large.fontSize};
+    line-height: ${({ theme }) => theme.font.h1.large.lineHeight};
   }
 `;
 
@@ -46,18 +36,22 @@ const StyledLeftIcon = styled.div`
 
 const StyledBottomIcon = styled.div`
   position: absolute;
-  right: 0;
+  right: ${({ theme }) => theme.layout.paddingWidth.desktop};
   bottom: 0;
   width: 358px;
   height: 100px;
   background-size: contain;
   background-image: url(${bottomIcon});
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    right: calc(50% - 178px);
+  }
 `;
 
 export {
   StyledCard,
-  StyledH1,
-  StyledContent,
+  StyledHeader,
+  StyledCardTitle,
   StyledLeftIcon,
   StyledBottomIcon,
 };

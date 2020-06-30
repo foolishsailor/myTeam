@@ -1,7 +1,10 @@
 import React from "react";
 import Container from "../../components/containers/container";
+import Header from "../../components/header";
 import Section from "../../components/section";
 import Card from "../../components/cards/card";
+import CardTitle from "../../components/cards/card/cardTitle";
+import CardContent from "../../components/cards/card/cardContent";
 import Bottom from "../../components/bottom";
 import Directors from "./directors";
 import ClientList from "./clientList";
@@ -14,8 +17,6 @@ import {
   DirectorLeftIcon,
   DirectorsRightIcon,
   ClientsLeftIcon,
-  HeaderTitle,
-  HeaderContent,
   Title,
   Main,
   ClientContainer,
@@ -24,20 +25,20 @@ import {
 const About = () => {
   return (
     <>
-      <Section inline>
+      <Header inline>
         <RightIcon width={200} height={200} url={rightIcon} />
         <Card style={{ flexGrow: 0.5 }}>
-          <HeaderTitle>About</HeaderTitle>
+          <CardTitle>About</CardTitle>
         </Card>
         <Card highlight>
-          <HeaderContent>
+          <CardContent>
             We help companies build dynamic teams made up of top global talent.
             Using our network of passionate professionals we drive innovation
             and deliver incredible outcomes. Talented, diverse teams shape the
             best products and experiences. We’ll bring those teams to you.
-          </HeaderContent>
+          </CardContent>
         </Card>
-      </Section>
+      </Header>
       <Main inline variant={"deepJungleGreen"}>
         <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
         <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />

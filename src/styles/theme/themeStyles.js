@@ -27,6 +27,10 @@ const font = {
       fontSize: "100px",
       lineHeight: "100px",
     },
+    small: {
+      fontSize: "40px",
+      lineHeight: "40px",
+    },
   },
   body: {
     small: {
@@ -43,7 +47,7 @@ const breakPoints = {
 
 const layout = {
   maxWidth: "1440px",
-  marginWidth: {
+  paddingWidth: {
     desktop: "165px",
     tablet: "40px",
     mobile: "24px",

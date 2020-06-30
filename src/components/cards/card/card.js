@@ -7,6 +7,11 @@ const Card = styled.div`
   flex: 1 1;
   align-self: stretch;
 
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    justify-content: center;
+    margin-right: 0;
+  }
+
   &:before {
     content: "";
     position: absolute;
