@@ -38,7 +38,7 @@ const Container = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      <Nav inline />
+      <Nav inline header />
       <StyledLink to='/contact'>
         <StyledButton>contact us</StyledButton>
       </StyledLink>

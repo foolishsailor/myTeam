@@ -6,8 +6,8 @@ import backgroundImage from "../../assets/bg-pattern-home-6-about-5.svg";
 
 const TopContainer = styled(Section)`
   align-items: center;
-  justify-content: space-between;
-  padding: 76px 245px;
+  justify-content: space-around;
+  padding: 76px 100px;
   background-color: ${({ theme }) => theme.colors.lightCoral};
   color: ${({ theme }) => theme.colors.sacStateGreen};
 
@@ -19,6 +19,10 @@ const TopContainer = styled(Section)`
     width: 200px;
     height: 144px;
     background-image: url(${backgroundImage});
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+      bottom: -20px;
+    }
   }
 `;
 

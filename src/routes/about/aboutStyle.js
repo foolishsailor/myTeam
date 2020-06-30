@@ -18,6 +18,11 @@ const DirectorLeftIcon = styled(BackgroundImage)`
   position: absolute;
   left: -100px;
   top: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    left: -100px;
+    top: -100px;
+  }
 `;
 
 const DirectorsRightIcon = styled(BackgroundImage)`
@@ -30,6 +35,15 @@ const ClientsLeftIcon = styled(BackgroundImage)`
   position: absolute;
   left: 0;
   top: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    top: -145px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    left: -100px;
+    top: -142px;
+  }
 `;
 
 const Title = styled.h2`
@@ -39,8 +53,12 @@ const Title = styled.h2`
 `;
 
 const Main = styled(Section)`
-  padding: 140px 165px;
   flex-wrap: wrap;
+  overflow: hidden;
+`;
+
+const ClientSection = styled(Section)`
+  overflow: hidden;
 `;
 
 const ClientContainer = styled(Container)`
@@ -55,4 +73,5 @@ export {
   Title,
   Main,
   ClientContainer,
+  ClientSection,
 };

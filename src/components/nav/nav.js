@@ -8,6 +8,9 @@ const Container = styled.div`
   display: flex;
   ${({ inline }) =>
     inline ? "flex-direction: row; flex: 1;" : "flex-direction: column; "};
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    align-items: ${({ header }) => (header ? "flex-start" : "center")};
+  }
 `;
 
 const NavItems = styled.li`
@@ -22,21 +25,27 @@ const NavList = styled.ul`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    display: none;
+    display: ${({ header }) => (header ? "none" : "flex")};
   }
 `;
 
-const nav = ({ inline }) => {
+const LogoLink = styled(Link)`
+  margin-right: 80px;
+  margin-bottom: ${({ header }) => (header ? 0 : "25px")};
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    margin-right: 0;
+  }
+`;
+
+const nav = ({ inline, header }) => {
   return (
     <Container inline={inline}>
-      <Link
-        style={{ marginRight: "80px", marginBottom: inline ? 0 : "25px" }}
-        to='/'
-      >
+      <LogoLink header={header} to='/'>
         <BackgroundImage width={160} height={40} url={myTeamLogo} />
-      </Link>
+      </LogoLink>
 
-      <NavList>
+      <NavList header={header}>
         <NavItems>
           <Link to='/'>home</Link>
         </NavItems>

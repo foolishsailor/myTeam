@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "../nav";
 import facebookIcon from "../../assets/icon-facebook.svg";
 import twitterIcon from "../../assets/icon-twitter.svg";
 import pinterest from "../../assets/icon-pinterest.svg";
 import {
   BottomContainer,
+  StyledNav,
   AddressDiv,
   SocialDiv,
   SocialImageList,
   SocialImage,
+  CopyrightDiv,
 } from "./footerStyles";
 
 const imageList = [
@@ -31,8 +32,8 @@ const SocialImages = imageList.map((item, i) => {
 const Footer = ({ theme, ...props }) => {
   return (
     <>
-      <BottomContainer>
-        <Nav />
+      <BottomContainer inline>
+        <StyledNav />
         <AddressDiv className='text---small'>
           987 Hillcrest Lane
           <br />
@@ -44,10 +45,10 @@ const Footer = ({ theme, ...props }) => {
         </AddressDiv>
         <SocialDiv>
           <SocialImageList>{SocialImages}</SocialImageList>
-          <span style={{ opacity: 0.6 }} className='text---small'>
-            Copyright 2020, All Rights Reserved
-          </span>
         </SocialDiv>
+        <CopyrightDiv className='text---small'>
+          Copyright 2020, All Rights Reserved
+        </CopyrightDiv>
       </BottomContainer>
     </>
   );

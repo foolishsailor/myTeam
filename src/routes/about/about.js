@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../components/containers/container";
 import Header from "../../components/header";
-import Section from "../../components/section";
+
 import Card from "../../components/cards/card";
 import CardTitle from "../../components/cards/card/cardTitle";
 import CardContent from "../../components/cards/card/cardContent";
@@ -20,6 +20,7 @@ import {
   Title,
   Main,
   ClientContainer,
+  ClientSection,
 } from "./aboutStyle";
 
 const About = () => {
@@ -46,13 +47,13 @@ const About = () => {
         <Container inline>{Directors}</Container>
       </Main>
 
-      <Section variant={"sacStateGreen"}>
+      <ClientSection variant={"sacStateGreen"}>
         <Title>Some of our clients</Title>
         <ClientContainer inline>
-          <ClientsLeftIcon width={200} height={200} url={clientsLeftIcon} />
+          <ClientsLeftIcon width={200} height={244} url={clientsLeftIcon} />
           {ClientList}
         </ClientContainer>
-      </Section>
+      </ClientSection>
       <Bottom />
     </>
   );
