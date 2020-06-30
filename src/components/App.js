@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyles from "../styles/globalStyles";
 import Theme from "../styles/theme";
-import Container from "./container";
+import Container from "./containers/siteContainer";
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
 import Home from "../routes/home";

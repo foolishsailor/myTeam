@@ -1,68 +1,50 @@
 import React from "react";
-import styled from "styled-components";
+import Container from "../../components/containers/container";
 import Section from "../../components/section";
 import Card from "../../components/cards/card";
+import Bottom from "../../components/bottom";
 import Directors from "./directors";
 import rightIcon from "../../assets/bg-pattern-about-1-mobile-nav-1.svg";
-
-const RightIcon = styled.div`
-  position: absolute;
-  right: -100px;
-  bottom: 0;
-  height: 200px;
-  width: 200px;
-  background-size: contain;
-  background-image: url(${rightIcon});
-`;
-
-const StyledH1 = styled.h1`
-  margin: 0;
-  padding-top: 20px;
-`;
-
-const StyledHeaderContent = styled.div`
-  align-self: flex-end;
-  margin-top: 40px;
-`;
-
-const StyledMainTitle = styled.h2`
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-`;
-
-const StyledMain = styled(Section)`
-  padding: 140px 165px;
-  flex-wrap: wrap;
-`;
-
-const StyledDirectorContainer = styled.div`
-  display: flex;
-
-  flex-wrap: wrap;
-`;
+import directorsLeftIcon from "../../assets/bg-pattern-about-2-contact-1.svg";
+import directorsRightIcon from "../../assets/bg-pattern-home-4-about-3.svg";
+import {
+  RightIcon,
+  DirectorLeftIcon,
+  DirectorsRightIcon,
+  HeaderTitle,
+  HeaderContent,
+  Title,
+  Main,
+} from "./aboutStyle";
 
 const About = () => {
   return (
     <>
       <Section inline>
-        <RightIcon />
+        <RightIcon width={200} height={200} url={rightIcon} />
         <Card style={{ flexGrow: 0.5 }}>
-          <StyledH1>About</StyledH1>
+          <HeaderTitle>About</HeaderTitle>
         </Card>
         <Card highlight>
-          <StyledHeaderContent>
+          <HeaderContent>
             We help companies build dynamic teams made up of top global talent.
             Using our network of passionate professionals we drive innovation
             and deliver incredible outcomes. Talented, diverse teams shape the
             best products and experiences. We’ll bring those teams to you.
-          </StyledHeaderContent>
+          </HeaderContent>
         </Card>
       </Section>
-      <StyledMain inline variant={"deepJungleGreen"}>
-        <StyledMainTitle>Meet the directors</StyledMainTitle>
-        <StyledDirectorContainer>{Directors}</StyledDirectorContainer>
-      </StyledMain>
+      <Main inline variant={"deepJungleGreen"}>
+        <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
+        <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />
+        <Title>Meet the directors</Title>
+        <Container inline>{Directors}</Container>
+      </Main>
+
+      <Section variant={"sacStateGreen"}>
+        <Title>Some of our clients</Title>
+      </Section>
+      <Bottom />
     </>
   );
 };

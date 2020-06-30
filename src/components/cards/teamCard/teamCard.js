@@ -54,6 +54,10 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
   transition: all 200ms;
 
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+  }
+
   &:hover > ${Quote} {
     display: block;
   }

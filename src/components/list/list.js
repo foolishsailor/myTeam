@@ -9,7 +9,6 @@ const ListItem = styled.li`
 
 const List = ({ list }) => {
   const ImageList = list.map((item, i) => {
-    console.log("image", item.image);
     return (
       <ListItem key={i}>
         <div style={{ marginRight: 20 }}>
