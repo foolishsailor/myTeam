@@ -8,6 +8,18 @@ const Section = styled.div`
   padding: 140px 165px;
   background-color: ${({ variant, theme }) =>
     variant ? theme.colors[variant] : theme.colors.midnightGreen};
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: ${({ theme }) => theme.layout.marginWidth.tablet};
+    margin-left: ${({ theme }) => theme.layout.marginWidth.tablet};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    margin-right: ${({ theme }) => theme.layout.marginWidth.mobile};
+    margin-left: ${({ theme }) => theme.layout.marginWidth.mobile};
+  }
 `;
 
 export default Section;

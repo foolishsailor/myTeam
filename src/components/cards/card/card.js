@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledCard = styled.div`
+const Card = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "column" : "row")};
@@ -21,16 +20,11 @@ const StyledCard = styled.div`
           ? theme.colors.raptureBlue
           : theme.colors.lightCoral
         : "transparent"};
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+      display: none;
+    }
   }
 `;
-
-const Card = ({ children, highlight, theme, inline, style, ...props }) => {
-  console.log("highlight", highlight, highlight ? "ture" : "false");
-  return (
-    <StyledCard style={style} inline={inline} highlight={highlight}>
-      {children}
-    </StyledCard>
-  );
-};
 
 export default Card;

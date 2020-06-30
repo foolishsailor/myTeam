@@ -29,7 +29,6 @@ const SocialImages = imageList.map((item, i) => {
 });
 
 const Footer = ({ theme, ...props }) => {
-  console.log("trigger");
   return (
     <>
       <BottomContainer>

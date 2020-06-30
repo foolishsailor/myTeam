@@ -20,9 +20,13 @@ const NavList = styled.ul`
   ${NavItems}:nth-child(1) {
     margin-left: 0;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    display: none;
+  }
 `;
 
-const nav = ({ theme, inline }) => {
+const nav = ({ inline }) => {
   return (
     <Container inline={inline}>
       <Link

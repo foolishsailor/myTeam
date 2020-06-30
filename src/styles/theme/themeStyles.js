@@ -20,12 +20,36 @@ const font = {
     fontSize: "15px",
     lineHeight: "25px",
   },
+  h1: {
+    fontSize: "64px",
+    lineHeight: "56px",
+    large: {
+      fontSize: "100px",
+      lineHeight: "100px",
+    },
+  },
+  body: {
+    small: {
+      fontSize: "15px",
+      lineHeight: "25px",
+    },
+  },
+};
+
+const breakPoints = {
+  mobile: "375px",
+  tablet: "768px",
 };
 
 const layout = {
   maxWidth: "1440px",
+  marginWidth: {
+    desktop: "165px",
+    tablet: "40px",
+    mobile: "24px",
+  },
 };
 
-const theme = { colors, font, layout };
+const theme = { colors, font, layout, breakPoints };
 
 export default theme;
