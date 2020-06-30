@@ -31,7 +31,7 @@ const About = () => {
         <Card style={{ flexGrow: 0.5 }}>
           <CardTitle>About</CardTitle>
         </Card>
-        <Card highlight>
+        <Card highlight hideHighlight={"tablet"}>
           <CardContent>
             We help companies build dynamic teams made up of top global talent.
             Using our network of passionate professionals we drive innovation

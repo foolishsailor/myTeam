@@ -6,10 +6,19 @@ import backgroundImage from "../../assets/bg-pattern-home-6-about-5.svg";
 
 const TopContainer = styled(Section)`
   align-items: center;
-  justify-content: space-around;
   padding: 76px 100px;
   background-color: ${({ theme }) => theme.colors.lightCoral};
   color: ${({ theme }) => theme.colors.sacStateGreen};
+  justify-content: space-around;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    flex-direction: row;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &:before {
     content: "";
@@ -28,6 +37,11 @@ const TopContainer = styled(Section)`
 
 const StyledH2 = styled.h2`
   margin-bottom: 24px;
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    bottom: -20px;
+    font-size: ${({ theme }) => theme.font.h2.small.fontSize};
+    line-height: ${({ theme }) => theme.font.h2.small.lineHeight};
+  }
 `;
 
 const Bottom = () => {

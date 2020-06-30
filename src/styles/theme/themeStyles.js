@@ -32,6 +32,12 @@ const font = {
       lineHeight: "40px",
     },
   },
+  h2: {
+    small: {
+      fontSize: "32px",
+      lineHeight: "48px",
+    },
+  },
   body: {
     small: {
       fontSize: "15px",
@@ -49,7 +55,7 @@ const layout = {
   maxWidth: "1440px",
   paddingWidth: {
     desktop: "165px",
-    tablet: "40px",
+    tablet: "100px",
     mobile: "24px",
   },
 };

@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import Section from "../../components/section";
 import Card from "../../components/cards/card";
 import Header from "../../components/header";
 import CardTitle from "../../components/cards/card/cardTitle";
 import leftIcon from "../../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../../assets/bg-pattern-home-2.svg";
+import List from "../../components/list";
 
 const StyledCard = styled(Card)`
   margin-right: 140px;
@@ -15,6 +17,20 @@ const StyledHeader = styled(Header)`
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding-bottom: 200px !important;
   }
+`;
+
+const StyledH2 = styled.h2`
+  margin-top: 52px;
+  margin-right: 50px;
+  margin-bottom: 64px;
+`;
+
+const StyledList = styled(List)`
+  margin-top: 52px;
+`;
+
+const TopSection = styled(Section)`
+  background-color: ${({ theme }) => theme.colors.sacStateGreen};
 `;
 
 const StyledCardTitle = styled(CardTitle)`
@@ -51,7 +67,10 @@ const StyledBottomIcon = styled.div`
 export {
   StyledCard,
   StyledHeader,
+  TopSection,
   StyledCardTitle,
   StyledLeftIcon,
   StyledBottomIcon,
+  StyledH2,
+  StyledList,
 };

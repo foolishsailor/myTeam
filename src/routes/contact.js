@@ -8,9 +8,9 @@ import cog from "../assets/icon-cog.svg";
 import chart from "../assets/icon-chart.svg";
 
 const list = [
-  { image: talent, text: "The quality of our talent network" },
-  { image: cog, text: "Usage & implementation of our software" },
-  { image: chart, text: "How we help drive innovation" },
+  { image: talent, title: "The quality of our talent network" },
+  { image: cog, title: "Usage & implementation of our software" },
+  { image: chart, title: "How we help drive innovation" },
 ];
 
 const Contact = () => {

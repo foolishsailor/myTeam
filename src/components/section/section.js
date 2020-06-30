@@ -10,7 +10,7 @@ const Section = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding-right: ${({ theme }) => theme.layout.paddingWidth.tablet};
     padding-left: ${({ theme }) => theme.layout.paddingWidth.tablet};
   }

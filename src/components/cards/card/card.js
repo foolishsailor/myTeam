@@ -26,7 +26,8 @@ const Card = styled.div`
           : theme.colors.lightCoral
         : "transparent"};
 
-    @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    @media (max-width: ${({ theme, hideHighlight }) =>
+        hideHighlight ? theme.breakPoints[hideHighlight] : 0}) {
       display: none;
     }
   }
