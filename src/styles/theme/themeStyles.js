@@ -41,8 +41,8 @@ const font = {
 };
 
 const breakPoints = {
-  mobile: "375px",
-  tablet: "768px",
+  mobile: "650px",
+  tablet: "1024px",
 };
 
 const layout = {
