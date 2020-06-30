@@ -4,17 +4,21 @@ import Section from "../../components/section";
 import Card from "../../components/cards/card";
 import Bottom from "../../components/bottom";
 import Directors from "./directors";
+import ClientList from "./clientList";
 import rightIcon from "../../assets/bg-pattern-about-1-mobile-nav-1.svg";
 import directorsLeftIcon from "../../assets/bg-pattern-about-2-contact-1.svg";
 import directorsRightIcon from "../../assets/bg-pattern-home-4-about-3.svg";
+import clientsLeftIcon from "../../assets/bg-pattern-home-3.svg";
 import {
   RightIcon,
   DirectorLeftIcon,
   DirectorsRightIcon,
+  ClientsLeftIcon,
   HeaderTitle,
   HeaderContent,
   Title,
   Main,
+  ClientContainer,
 } from "./aboutStyle";
 
 const About = () => {
@@ -43,6 +47,10 @@ const About = () => {
 
       <Section variant={"sacStateGreen"}>
         <Title>Some of our clients</Title>
+        <ClientContainer inline>
+          <ClientsLeftIcon width={200} height={200} url={clientsLeftIcon} />
+          {ClientList}
+        </ClientContainer>
       </Section>
       <Bottom />
     </>
