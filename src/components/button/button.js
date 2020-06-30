@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  border: solid 1px
+  border: solid 2px
     ${({ theme, variant }) =>
       variant ? theme.colors[variant] : theme.colors.white};
   border-radius: 50px;
@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   color: ${({ theme, variant }) =>
     variant ? theme.colors[variant] : theme.colors.white};
   padding: 15px 30px;
+  min-width: 150px;
   transition: all 200ms;
 
   &:hover {

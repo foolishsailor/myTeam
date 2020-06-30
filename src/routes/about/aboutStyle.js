@@ -44,7 +44,7 @@ const Main = styled(Section)`
 `;
 
 const ClientContainer = styled(Container)`
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export {

@@ -7,7 +7,7 @@ import techRadarLogo from "../../assets/logo-tech-radar.png";
 import gadgetsNow from "../../assets/logo-gadgets-now.png";
 
 const ClientImage = styled.img`
-  margin: 40px;
+  margin: 40px 20px;
 `;
 
 const ClientList = [
