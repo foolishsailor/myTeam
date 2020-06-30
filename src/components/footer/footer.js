@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import SocialImageList from "../socialImageList";
 import facebookIcon from "../../assets/icon-facebook.svg";
 import twitterIcon from "../../assets/icon-twitter.svg";
 import pinterest from "../../assets/icon-pinterest.svg";
@@ -8,26 +8,15 @@ import {
   StyledNav,
   AddressDiv,
   SocialDiv,
-  SocialImageList,
-  SocialImage,
+  SocialImageContainer,
   CopyrightDiv,
 } from "./footerStyles";
 
-const imageList = [
+const socialImages = [
   { link: "", url: facebookIcon, alt: "Facebook" },
   { link: "", url: twitterIcon, alt: "Twitter" },
   { link: "", url: pinterest, alt: "Pinterest" },
 ];
-
-const SocialImages = imageList.map((item, i) => {
-  return (
-    <Link key={i} to={item.link} style={{ marginRight: 16 }}>
-      <SocialImage type='image/svg+xml' width={24} height={24} data={item.url}>
-        {item.alt}
-      </SocialImage>
-    </Link>
-  );
-});
 
 const Footer = ({ theme, ...props }) => {
   return (
@@ -44,7 +33,9 @@ const Footer = ({ theme, ...props }) => {
           Call Us: 949-833-7432
         </AddressDiv>
         <SocialDiv>
-          <SocialImageList>{SocialImages}</SocialImageList>
+          <SocialImageContainer>
+            <SocialImageList list={socialImages} />
+          </SocialImageContainer>
         </SocialDiv>
         <CopyrightDiv className='text---small'>
           Copyright 2020, All Rights Reserved

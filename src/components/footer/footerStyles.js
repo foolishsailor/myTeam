@@ -64,7 +64,7 @@ const CopyrightDiv = styled.div`
   }
 `;
 
-const SocialImageList = styled.div`
+const SocialImageContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
@@ -78,19 +78,11 @@ const SocialImageList = styled.div`
   }
 `;
 
-const SocialImage = styled.object`
-  &:hover {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(25%) saturate(7485%)
-      hue-rotate(317deg) brightness(114%) contrast(93%);
-  }
-`;
-
 export {
   BottomContainer,
   StyledNav,
   AddressDiv,
   SocialDiv,
-  SocialImageList,
-  SocialImage,
+  SocialImageContainer,
   CopyrightDiv,
 };

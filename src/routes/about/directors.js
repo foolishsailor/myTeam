@@ -13,28 +13,28 @@ const directorList = [
     title: "Founder & CEO",
     image: Nikita,
     quote:
-      "It always amazes me how much talent there is in every corner of the globe.",
+      "“It always amazes me how much talent there is in every corner of the globe.”",
   },
   {
     name: "Cristian Duncan",
     title: "Co-founder & COO",
     image: Christian,
     quote:
-      "Distributed teams required unique processes. You need to approach work in a new way.",
+      "“Distributed teams required unique processes. You need to approach work in a new way.”",
   },
   {
     name: "Cruz Hamer",
     title: "Co-founder & CTO",
     image: Cruz,
     quote:
-      "Technology is at the forefront of enabling distributed teams. That's where we come in.",
+      "“Technology is at the forefront of enabling distributed teams. That's where we come in.”",
   },
   {
     name: "Drake Heaton",
     title: "Business Development Lead",
     image: Drake,
     quote:
-      "Hiring similar people from similar backgrounds is a surefire way to stunt innovation.",
+      "“Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”",
   },
 
   {
@@ -42,7 +42,7 @@ const directorList = [
     title: "Lead Marketing",
     image: Griffin,
     quote:
-      "Unique perspectives shape unique products, which is what you need to survive these days.",
+      "“Unique perspectives shape unique products, which is what you need to survive these days.”",
   },
 
   {
@@ -50,7 +50,7 @@ const directorList = [
     title: "Head of Talent",
     image: Aden,
     quote:
-      "“Empowered teams create truly amazing products. Set the north star and let them follow it.“",
+      "“Empowered teams create truly amazing products. Set the north star and let them follow it.”",
   },
 ];
 
