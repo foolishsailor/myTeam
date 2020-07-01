@@ -3,8 +3,7 @@ import Section from "../../components/section";
 import CardContainer from "../../components/containers/cardContainer";
 import HeaderCard from "../../components/cards/headerCard";
 import CardTitle from "../../components/cards/headerCard/cardTitle";
-import leftIcon from "../../assets/bg-pattern-home-1.svg";
-import bottomIcon from "../../assets/bg-pattern-home-2.svg";
+import BackgroundImage from "../../components/backgroundImage";
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 60px;
@@ -55,24 +54,21 @@ const StyledCardTitle = styled(CardTitle)`
   }
 `;
 
-const StyledLeftIcon = styled.div`
+const TopSectionIcon = styled(BackgroundImage)`
   position: absolute;
-  top: 0;
-  left: -265px;
-  width: 200px;
-  height: 200px;
-  background-image: url(${leftIcon});
-  background-size: contain;
+  right: -100px;
+  bottom: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    right: -100px;
+    top: 0;
+  }
 `;
 
-const StyledBottomIcon = styled.div`
+const StyledBottomIcon = styled(BackgroundImage)`
   position: absolute;
   right: ${({ theme }) => theme.layout.paddingWidth.desktop};
   bottom: 0;
-  width: 358px;
-  height: 100px;
-  background-size: contain;
-  background-image: url(${bottomIcon});
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
     right: calc(50% - 178px);
@@ -86,8 +82,8 @@ export {
   TopSection,
   BottomSection,
   StyledCardTitle,
-  StyledLeftIcon,
   StyledBottomIcon,
+  TopSectionIcon,
   StyledH2,
   StyledBottomH2,
   StyledSpan,

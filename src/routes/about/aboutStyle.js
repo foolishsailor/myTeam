@@ -25,12 +25,6 @@ const DirectorLeftIcon = styled(BackgroundImage)`
   }
 `;
 
-const DirectorsRightIcon = styled(BackgroundImage)`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-`;
-
 const ClientsLeftIcon = styled(BackgroundImage)`
   position: absolute;
   left: 0;
@@ -68,7 +62,6 @@ const ClientContainer = styled(Container)`
 export {
   RightIcon,
   DirectorLeftIcon,
-  DirectorsRightIcon,
   ClientsLeftIcon,
   Title,
   Main,

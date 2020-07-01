@@ -5,6 +5,7 @@ import HeaderCard from "../../components/cards/headerCard";
 import CardTitle from "../../components/cards/headerCard/cardTitle";
 import CardContent from "../../components/cards/headerCard/cardContent";
 import Bottom from "../../components/bottom";
+import BackgroundIcon from "../../components/backgroundIcon";
 import Directors from "./directors";
 import ClientList from "./clientList";
 import rightIcon from "../../assets/bg-pattern-about-1-mobile-nav-1.svg";
@@ -14,7 +15,6 @@ import clientsLeftIcon from "../../assets/bg-pattern-home-3.svg";
 import {
   RightIcon,
   DirectorLeftIcon,
-  DirectorsRightIcon,
   ClientsLeftIcon,
   Title,
   Main,
@@ -41,7 +41,13 @@ const About = () => {
       </Section>
       <Main inline variant={"deepJungleGreen"}>
         <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
-        <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />
+        <BackgroundIcon
+          width={147}
+          height={100}
+          right={0}
+          bottom={0}
+          url={directorsRightIcon}
+        />
         <Title>Meet the directors</Title>
         <CardContainer>{Directors}</CardContainer>
       </Main>

@@ -5,9 +5,9 @@ import {
   StyledHeader,
   TopSection,
   BottomSection,
-  StyledCardTitle,
-  StyledLeftIcon,
   StyledBottomIcon,
+  StyledCardTitle,
+  TopSectionIcon,
   StyledH2,
   StyledBottomH2,
   StyledSpan,
@@ -26,10 +26,11 @@ import chart from "../../assets/icon-chart.svg";
 import avatarKady from "../../assets/avatar-kady.jpg";
 import avatarAiysha from "../../assets/avatar-aiysha.jpg";
 import avatarArthur from "../../assets/avatar-arthur.jpg";
-import BackgroundImage from "../../components/backgroundImage";
-
+import topSectionIcon from "../../assets/bg-pattern-home-3.svg";
 import testLeftIcon from "../../assets/bg-pattern-home-4-about-3.svg";
 import testRightIcon from "../../assets/bg-pattern-home-5.svg";
+import leftIcon from "../../assets/bg-pattern-home-1.svg";
+import bottomIcon from "../../assets/bg-pattern-home-2.svg";
 
 const list = [
   {
@@ -96,10 +97,17 @@ const Home = () => {
             talent. We’re about to change that.
           </CardContent>
         </HeaderCard>
-        <StyledLeftIcon />
-        <StyledBottomIcon />
+        <BackgroundIcon
+          top={0}
+          left={-265}
+          width={200}
+          height={200}
+          url={leftIcon}
+        />
+        <StyledBottomIcon width={358} height={100} url={bottomIcon} />
       </StyledHeader>
       <TopSection inline>
+        <TopSectionIcon width={200} height={244} url={topSectionIcon} />
         <HeaderCard highlight>
           <StyledH2>
             Build & manage distributed teams like no one else.
