@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  StyledCardContainer,
   StyledCard,
   StyledHeader,
   TopSection,
@@ -12,14 +13,23 @@ import {
   StyledSpan,
 } from "./homeStyles";
 import HeaderCard from "../../components/cards/headerCard";
+import BackgroundIcon from "../../components/backgroundIcon";
 import List from "../../components/list";
-
 import CardContent from "../../components/cards/headerCard/cardContent";
 import Bottom from "../../components/bottom";
 
+import TestimonialCard from "../../components/cards/testimonialCard";
 import talent from "../../assets/icon-person.svg";
 import cog from "../../assets/icon-cog.svg";
 import chart from "../../assets/icon-chart.svg";
+
+import avatarKady from "../../assets/avatar-kady.jpg";
+import avatarAiysha from "../../assets/avatar-aiysha.jpg";
+import avatarArthur from "../../assets/avatar-arthur.jpg";
+import BackgroundImage from "../../components/backgroundImage";
+
+import testLeftIcon from "../../assets/bg-pattern-home-4-about-3.svg";
+import testRightIcon from "../../assets/bg-pattern-home-5.svg";
 
 const list = [
   {
@@ -41,6 +51,34 @@ const list = [
       "Our customized platform with in-built analytics helps you manage your distributed teams.",
   },
 ];
+
+const testimonialContent = [
+  {
+    quote:
+      " “The team perfectly fit the specialized skill set required.   focused on the most essential features helping us launch the platform eight months faster than planned.”",
+    name: "Kady Baker",
+    title: "Product Manager at Bookmark",
+    image: avatarKady,
+  },
+  {
+    quote:
+      "“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”",
+    name: "Aiysha Reese",
+    title: "Founder of Manage",
+    image: avatarAiysha,
+  },
+  {
+    quote:
+      "“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”",
+    name: "Arthur Clarke",
+    title: "Co-founder of MyPhysio",
+    image: avatarArthur,
+  },
+];
+
+const testimonials = testimonialContent.map((item, i) => {
+  return <TestimonialCard item={item} key={i} />;
+});
 
 const Home = () => {
   return (
@@ -72,9 +110,24 @@ const Home = () => {
         </HeaderCard>
       </TopSection>
       <BottomSection>
+        <BackgroundIcon
+          top={0}
+          left={0}
+          width={147}
+          height={100}
+          url={testLeftIcon}
+        />
+        <BackgroundIcon
+          bottom={0}
+          right={0}
+          width={200}
+          height={100}
+          url={testRightIcon}
+        />
         <StyledBottomH2>
           Delivering real results for top companies. Some of our{" "}
           <StyledSpan>success stories.</StyledSpan>
+          <StyledCardContainer>{testimonials}</StyledCardContainer>
         </StyledBottomH2>
       </BottomSection>
       <Bottom />

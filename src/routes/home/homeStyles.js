@@ -1,9 +1,18 @@
 import styled from "styled-components";
 import Section from "../../components/section";
+import CardContainer from "../../components/containers/cardContainer";
 import HeaderCard from "../../components/cards/headerCard";
 import CardTitle from "../../components/cards/headerCard/cardTitle";
 import leftIcon from "../../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../../assets/bg-pattern-home-2.svg";
+
+const StyledCardContainer = styled(CardContainer)`
+  margin-top: 60px;
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    grid-template-columns: 1fr;
+    grid-gap-column: 24px;
+  }
+`;
 
 const StyledCard = styled(HeaderCard)`
   margin-right: 140px;
@@ -71,6 +80,7 @@ const StyledBottomIcon = styled.div`
 `;
 
 export {
+  StyledCardContainer,
   StyledCard,
   StyledHeader,
   TopSection,
