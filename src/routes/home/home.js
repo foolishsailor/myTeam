@@ -3,10 +3,13 @@ import {
   StyledCard,
   StyledHeader,
   TopSection,
+  BottomSection,
   StyledCardTitle,
   StyledLeftIcon,
   StyledBottomIcon,
   StyledH2,
+  StyledBottomH2,
+  StyledSpan,
 } from "./homeStyles";
 import Card from "../../components/cards/card";
 import List from "../../components/list";
@@ -68,6 +71,12 @@ const Home = () => {
           <List list={list} variant={"lightCoral"} />
         </Card>
       </TopSection>
+      <BottomSection>
+        <StyledBottomH2>
+          Delivering real results for top companies. Some of our{" "}
+          <StyledSpan>success stories.</StyledSpan>
+        </StyledBottomH2>
+      </BottomSection>
       <Bottom />
     </>
   );

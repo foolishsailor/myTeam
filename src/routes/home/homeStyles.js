@@ -24,12 +24,20 @@ const StyledH2 = styled.h2`
   margin-bottom: 64px;
 `;
 
-const StyledList = styled(List)`
-  margin-top: 52px;
+const StyledBottomH2 = styled.h2`
+  text-align: center;
+`;
+
+const StyledSpan = styled.span`
+  color: ${({ theme }) => theme.colors.raptureBlue};
 `;
 
 const TopSection = styled(Section)`
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
+`;
+
+const BottomSection = styled(Section)`
+  background-color: ${({ theme }) => theme.colors.deepJungleGreen};
 `;
 
 const StyledCardTitle = styled(CardTitle)`
@@ -67,9 +75,11 @@ export {
   StyledCard,
   StyledHeader,
   TopSection,
+  BottomSection,
   StyledCardTitle,
   StyledLeftIcon,
   StyledBottomIcon,
   StyledH2,
-  StyledList,
+  StyledBottomH2,
+  StyledSpan,
 };

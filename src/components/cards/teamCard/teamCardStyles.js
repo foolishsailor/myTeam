@@ -46,14 +46,14 @@ const Button = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 40px 15px;
-  flex: 1 1 calc(33% - 160px);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 250px;
+  padding: 20px;
   align-items: center;
-  padding: 50px 55px;
+  flex: 1 1 calc(33% - 160px);
   text-align: center;
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
   transition: all 200ms;

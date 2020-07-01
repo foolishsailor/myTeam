@@ -21,6 +21,7 @@ import {
   Main,
   ClientContainer,
   ClientSection,
+  DirectorContainer,
 } from "./aboutStyle";
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
         <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
         <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />
         <Title>Meet the directors</Title>
-        <Container inline>{Directors}</Container>
+        <DirectorContainer>{Directors}</DirectorContainer>
       </Main>
 
       <ClientSection variant={"sacStateGreen"}>
