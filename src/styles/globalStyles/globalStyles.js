@@ -56,6 +56,9 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       color: ${({ theme }) => theme.colors.lightCoral};
     }
+    &.active {
+    color: ${({ theme }) => theme.colors.lightCoral};
+  }
   
   }
 

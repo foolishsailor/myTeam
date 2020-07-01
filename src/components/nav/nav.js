@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import myTeamLogo from "../../assets/logo.svg";
 import BackgroundImage from "../backgroundImage";
@@ -29,12 +29,18 @@ const NavList = styled.ul`
   }
 `;
 
-const LogoLink = styled(Link)`
+const LogoLink = styled(NavLink)`
   margin-right: 80px;
   margin-bottom: ${({ header }) => (header ? 0 : "25px")};
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin-right: 0;
+  }
+`;
+
+const StyledNavLink = styled(NavLink)`
+  a:active {
+    color: ${({ theme }) => theme.colors.lightCoral};
   }
 `;
 
@@ -47,10 +53,12 @@ const nav = ({ inline, header }) => {
 
       <NavList header={header}>
         <NavItems>
-          <Link to='/'>home</Link>
+          <StyledNavLink exact to='/'>
+            home
+          </StyledNavLink>
         </NavItems>
         <NavItems>
-          <Link to='/about'>about</Link>
+          <StyledNavLink to='/about'>about</StyledNavLink>
         </NavItems>
       </NavList>
     </Container>
