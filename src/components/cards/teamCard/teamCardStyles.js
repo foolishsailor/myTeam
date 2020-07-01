@@ -12,7 +12,7 @@ const DirectorName = styled.h3`
   margin: 0;
 `;
 
-const SmallText = styled.p`
+const SmallText = styled.div`
   margin: 0;
   font-size: ${({ theme }) => theme.font.textSmall.fontSize};
   line-height: ${({ theme }) => theme.font.textSmall.lineHeight};

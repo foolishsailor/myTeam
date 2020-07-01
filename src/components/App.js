@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import RouteWithTitle from "./routeWithTitle";
 import GlobalStyles from "../styles/globalStyles";
 import Theme from "../styles/theme";
 import Container from "./containers/siteContainer";
@@ -17,9 +18,13 @@ const App = () => {
         <Container>
           <NavBar />
           <Switch>
-            <Route path='/contact' component={Contact} />
-            <Route path='/about' component={About} />
-            <Route path='/' component={Home} />
+            <RouteWithTitle
+              path='/contact'
+              component={Contact}
+              title='Contact Us'
+            />
+            <RouteWithTitle path='/about' component={About} title='About Us' />
+            <RouteWithTitle path='/' component={Home} title='myTeam' />
           </Switch>
           <Footer />
         </Container>
