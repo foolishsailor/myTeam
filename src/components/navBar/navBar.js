@@ -18,7 +18,9 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 70px 165px 0 165px;
+  padding-top: 70px;
+  padding-right: ${({ theme }) => theme.layout.paddingWidth.desktop};
+  padding-left: ${({ theme }) => theme.layout.paddingWidth.desktop};
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
     padding-right: ${({ theme }) => theme.layout.paddingWidth.tablet};

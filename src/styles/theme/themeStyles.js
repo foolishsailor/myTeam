@@ -48,14 +48,14 @@ const font = {
 
 const breakPoints = {
   mobile: "650px",
-  tablet: "1024px",
+  tablet: "1000px",
 };
 
 const layout = {
   maxWidth: "1440px",
   paddingWidth: {
-    desktop: "165px",
-    tablet: "100px",
+    desktop: "14vw",
+    tablet: "10vw",
     mobile: "24px",
   },
 };

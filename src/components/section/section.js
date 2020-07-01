@@ -4,7 +4,11 @@ const Section = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "row" : "column")};
-  padding: 110px 165px 140px 165px;
+  padding-top: 110px;
+  padding-bottom: 140px;
+  padding-right: ${({ theme }) => theme.layout.paddingWidth.desktop};
+  padding-left: ${({ theme }) => theme.layout.paddingWidth.desktop};
+
   background-color: ${({ variant, theme }) =>
     variant ? theme.colors[variant] : theme.colors.midnightGreen};
 

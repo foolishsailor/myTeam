@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   color: ${({ theme, variant }) =>
     variant ? theme.colors[variant] : theme.colors.white};
   padding: 15px 30px;
-  min-width: 150px;
+  min-width: 160px;
   transition: all 200ms;
 
   &:hover {
