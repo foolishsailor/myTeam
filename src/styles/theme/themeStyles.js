@@ -55,7 +55,7 @@ const layout = {
   maxWidth: "1440px",
   paddingWidth: {
     desktop: "14vw",
-    tablet: "10vw",
+    tablet: "18vw",
     mobile: "24px",
   },
 };

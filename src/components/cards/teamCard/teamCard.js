@@ -10,7 +10,7 @@ import {
   JobTitle,
   Quote,
   Button,
-  Container,
+  StyledCard,
 } from "./teamCardStyles";
 
 const socialImages = [
@@ -20,7 +20,7 @@ const socialImages = [
 
 const TeamCard = ({ director }) => {
   return (
-    <Container>
+    <StyledCard>
       <Button></Button>
       <DirectorImage round width={96} height={96} url={director.image} />
       <DirectorName>{director.name}</DirectorName>
@@ -31,7 +31,7 @@ const TeamCard = ({ director }) => {
           <SocialImageList list={socialImages} />
         </SocialImageContainer>
       </Quote>
-    </Container>
+    </StyledCard>
   );
 };
 

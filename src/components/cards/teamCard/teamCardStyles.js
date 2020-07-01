@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Card from "../Card";
 import BackgroundImage from "../../backgroundImage";
 import PlusIcon from "../../../assets/icon-cross.svg";
 
@@ -45,16 +46,9 @@ const Button = styled.div`
   transition: all 200ms;
 `;
 
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const StyledCard = styled(Card)`
   height: 250px;
   padding: 20px;
-  align-items: center;
-  flex: 1 1 calc(33% - 160px);
-  text-align: center;
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
   transition: all 200ms;
 
@@ -87,5 +81,5 @@ export {
   JobTitle,
   Quote,
   Button,
-  Container,
+  StyledCard,
 };

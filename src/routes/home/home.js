@@ -11,10 +11,10 @@ import {
   StyledBottomH2,
   StyledSpan,
 } from "./homeStyles";
-import Card from "../../components/cards/card";
+import HeaderCard from "../../components/cards/headerCard";
 import List from "../../components/list";
 
-import CardContent from "../../components/cards/card/cardContent";
+import CardContent from "../../components/cards/headerCard/cardContent";
 import Bottom from "../../components/bottom";
 
 import talent from "../../assets/icon-person.svg";
@@ -51,25 +51,25 @@ const Home = () => {
             Find the best <span className='text---highlight'>talent</span>
           </StyledCardTitle>
         </StyledCard>
-        <Card highlight='primary' hideHighlight={"tablet"}>
+        <HeaderCard highlight='primary' hideHighlight={"tablet"}>
           <CardContent>
             Finding the right people and building high performing teams can be
             hard. Most companies aren’t tapping into the abundance of global
             talent. We’re about to change that.
           </CardContent>
-        </Card>
+        </HeaderCard>
         <StyledLeftIcon />
         <StyledBottomIcon />
       </StyledHeader>
       <TopSection inline>
-        <Card highlight>
+        <HeaderCard highlight>
           <StyledH2>
             Build & manage distributed teams like no one else.
           </StyledH2>
-        </Card>
-        <Card>
+        </HeaderCard>
+        <HeaderCard>
           <List list={list} variant={"lightCoral"} />
-        </Card>
+        </HeaderCard>
       </TopSection>
       <BottomSection>
         <StyledBottomH2>

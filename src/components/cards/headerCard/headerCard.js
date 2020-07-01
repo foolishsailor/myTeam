@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Card = styled.div`
+const HeaderCard = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "column" : "row")};
@@ -33,4 +33,4 @@ const Card = styled.div`
   }
 `;
 
-export default Card;
+export default HeaderCard;

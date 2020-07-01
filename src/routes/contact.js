@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../components/section";
-import Card from "../components/cards/card";
+import HeaderCard from "../components/cards/headerCard";
 import List from "../components/list";
 
 import talent from "../assets/icon-person.svg";
@@ -16,12 +16,12 @@ const list = [
 const Contact = () => {
   return (
     <Section>
-      <Card inline>
+      <HeaderCard inline>
         <h1>Contact</h1>
         <h2 className='small text---highlight'>Ask us about</h2>
         <List list={list} />
-      </Card>
-      <Card>Form</Card>
+      </HeaderCard>
+      <HeaderCard>Form</HeaderCard>
     </Section>
   );
 };

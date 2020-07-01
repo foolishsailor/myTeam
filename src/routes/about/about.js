@@ -1,10 +1,9 @@
 import React from "react";
-import Container from "../../components/containers/container";
 import Section from "../../components/section";
-
-import Card from "../../components/cards/card";
-import CardTitle from "../../components/cards/card/cardTitle";
-import CardContent from "../../components/cards/card/cardContent";
+import CardContainer from "../../components/containers/cardContainer";
+import HeaderCard from "../../components/cards/headerCard";
+import CardTitle from "../../components/cards/headerCard/cardTitle";
+import CardContent from "../../components/cards/headerCard/cardContent";
 import Bottom from "../../components/bottom";
 import Directors from "./directors";
 import ClientList from "./clientList";
@@ -21,7 +20,6 @@ import {
   Main,
   ClientContainer,
   ClientSection,
-  DirectorContainer,
 } from "./aboutStyle";
 
 const About = () => {
@@ -29,23 +27,23 @@ const About = () => {
     <>
       <Section inline>
         <RightIcon width={200} height={200} url={rightIcon} />
-        <Card style={{ flexGrow: 0.5 }}>
+        <HeaderCard style={{ flexGrow: 0.5 }}>
           <CardTitle>About</CardTitle>
-        </Card>
-        <Card highlight hideHighlight={"tablet"}>
+        </HeaderCard>
+        <HeaderCard highlight hideHighlight={"tablet"}>
           <CardContent>
             We help companies build dynamic teams made up of top global talent.
             Using our network of passionate professionals we drive innovation
             and deliver incredible outcomes. Talented, diverse teams shape the
             best products and experiences. We’ll bring those teams to you.
           </CardContent>
-        </Card>
+        </HeaderCard>
       </Section>
       <Main inline variant={"deepJungleGreen"}>
         <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
         <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />
         <Title>Meet the directors</Title>
-        <DirectorContainer>{Directors}</DirectorContainer>
+        <CardContainer>{Directors}</CardContainer>
       </Main>
 
       <ClientSection variant={"sacStateGreen"}>

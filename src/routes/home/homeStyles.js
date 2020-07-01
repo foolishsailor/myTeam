@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import Section from "../../components/section";
-import Card from "../../components/cards/card";
-import CardTitle from "../../components/cards/card/cardTitle";
+import HeaderCard from "../../components/cards/headerCard";
+import CardTitle from "../../components/cards/headerCard/cardTitle";
 import leftIcon from "../../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../../assets/bg-pattern-home-2.svg";
-import List from "../../components/list";
 
-const StyledCard = styled(Card)`
+const StyledCard = styled(HeaderCard)`
   margin-right: 140px;
 `;
 
