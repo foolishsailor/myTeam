@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Section from "../../components/section";
 import Card from "../../components/cards/card";
-import Header from "../../components/header";
 import CardTitle from "../../components/cards/card/cardTitle";
 import leftIcon from "../../assets/bg-pattern-home-1.svg";
 import bottomIcon from "../../assets/bg-pattern-home-2.svg";
@@ -11,7 +10,7 @@ const StyledCard = styled(Card)`
   margin-right: 140px;
 `;
 
-const StyledHeader = styled(Header)`
+const StyledHeader = styled(Section)`
   padding-bottom: 250px !important;
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {

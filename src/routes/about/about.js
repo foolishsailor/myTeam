@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../../components/containers/container";
-import Header from "../../components/header";
+import Section from "../../components/section";
 
 import Card from "../../components/cards/card";
 import CardTitle from "../../components/cards/card/cardTitle";
@@ -26,7 +26,7 @@ import {
 const About = () => {
   return (
     <>
-      <Header inline>
+      <Section inline>
         <RightIcon width={200} height={200} url={rightIcon} />
         <Card style={{ flexGrow: 0.5 }}>
           <CardTitle>About</CardTitle>
@@ -39,7 +39,7 @@ const About = () => {
             best products and experiences. We’ll bring those teams to you.
           </CardContent>
         </Card>
-      </Header>
+      </Section>
       <Main inline variant={"deepJungleGreen"}>
         <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
         <DirectorsRightIcon width={147} height={100} url={directorsRightIcon} />
