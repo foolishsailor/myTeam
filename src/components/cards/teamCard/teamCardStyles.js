@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Card from "../Card";
+import Card from "../card";
 import BackgroundImage from "../../backgroundImage";
 import PlusIcon from "../../../assets/icon-cross.svg";
 
