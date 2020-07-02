@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import RouteWithTitle from "./routeWithTitle";
 import GlobalStyles from "../styles/globalStyles";
 import Theme from "../styles/theme";
+import SideMenu from "../components/sideMenu";
 import SiteContainer from "./containers/siteContainer";
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
@@ -15,7 +16,8 @@ const App = () => {
     <Router>
       <Theme>
         <GlobalStyles />
-        <SiteContainer>
+        <SideMenu />
+        <SiteContainer id='content'>
           <NavBar />
           <Switch>
             <RouteWithTitle

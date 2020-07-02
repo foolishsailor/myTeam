@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   ${normalize}
  
   body{   
-    background-color: ${(props) => props.theme.colors.midnightGreen};
+    background-color: ${(props) => props.theme.colors.policeBlue};
     font-size: 18px;
     line-height: 28px;
     font-family: 'Livvic', sans-serif;

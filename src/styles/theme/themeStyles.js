@@ -47,15 +47,15 @@ const font = {
 };
 
 const breakPoints = {
-  mobile: "650px",
+  mobile: "660px",
   tablet: "1000px",
 };
 
 const layout = {
   maxWidth: "1440px",
   paddingWidth: {
-    desktop: "14vw",
-    tablet: "18vw",
+    desktop: "12vw",
+    tablet: "10vw",
     mobile: "24px",
   },
 };
