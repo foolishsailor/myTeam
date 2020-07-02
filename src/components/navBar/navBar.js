@@ -5,7 +5,8 @@ import {
   StyledLink,
   Hamburger,
   StyledInput,
-  StyledSpan,
+  HamburgerIcon,
+  CrossIcon,
   Container,
 } from "./navBarStyles";
 
@@ -31,7 +32,8 @@ const NavBar = () => {
       </StyledLink>
       <Hamburger>
         <StyledInput onChange={handleChange} id='hamburger' type='checkbox' />
-        <StyledSpan />
+        <HamburgerIcon />
+        <CrossIcon />
       </Hamburger>
     </Container>
   );

@@ -31,9 +31,13 @@ const StyledInput = styled.input`
   height: 0px;
 
   &:checked + span {
-    filter: brightness(100000%);
-    transform: rotate(135deg);
-    background-image: url(${cross});
+    transform: rotate(225deg);
+    opacity: 0;
+  }
+
+  &:checked + span + span {
+    transform: rotate(225deg);
+    opacity: 1;
   }
 
   &:checked #main {
@@ -41,7 +45,7 @@ const StyledInput = styled.input`
   }
 `;
 
-const StyledSpan = styled.span`
+const HamburgerIcon = styled.span`
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +54,21 @@ const StyledSpan = styled.span`
   background-image: url(${hamburger});
   background-repeat: no-repeat;
   background-position: center center;
-  transition: transform 200ms, background-image 160ms 0ms;
+  transition: all 200ms;
+`;
+
+const CrossIcon = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(${cross});
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  filter: brightness(100000%);
+  transition: all 200ms;
 `;
 
 const Container = styled.div`
@@ -79,6 +97,7 @@ export {
   StyledLink,
   Hamburger,
   StyledInput,
-  StyledSpan,
+  HamburgerIcon,
+  CrossIcon,
   Container,
 };
