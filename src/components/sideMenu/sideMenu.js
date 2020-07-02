@@ -38,7 +38,7 @@ const SideMenu = () => {
     const checkbox = document.querySelector("input[type='checkbox']");
 
     sideMenu.style.transform = "translateX(0)";
-    content.style.position = "static";
+    content.style.height = "inherit";
     checkbox.checked = false;
   };
 

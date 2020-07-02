@@ -86,8 +86,8 @@ const NavBar = () => {
       : (sideMenu.style.transform = "translateX(0)");
 
     props.target.checked
-      ? (mainContainer.style.position = "fixed")
-      : (mainContainer.style.position = "static");
+      ? (mainContainer.style.height = "100vh")
+      : (mainContainer.style.height = "inherit");
   };
 
   return (
