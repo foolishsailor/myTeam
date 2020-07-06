@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import BackgroundImage from "../backgroundImage";
-
+import BackgroundImage from "./backgroundImage";
 const BackgroundIcon = styled(BackgroundImage)`
   position: absolute;
   ${({ left }) => (left || left === 0 ? `left:${left}px;` : null)}

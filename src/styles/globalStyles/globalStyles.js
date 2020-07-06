@@ -57,19 +57,13 @@ const GlobalStyles = createGlobalStyle`
       color: ${({ theme }) => theme.colors.lightCoral};
     }
     &.active {
-    color: ${({ theme }) => theme.colors.lightCoral};
-  }
-  
-  }
-
-  .text---highlight {
-    color: ${(props) => props.theme.colors.lightCoral};
+      color: ${({ theme }) => theme.colors.lightCoral};
+    }  
   }
 
-  .text---small {
-    font-size: 15px;   
-    line-height: 25px;
-  }
+  input:focus, textarea:focus, select:focus, button:focus{
+        outline: none;
+    }
 
 
 `;

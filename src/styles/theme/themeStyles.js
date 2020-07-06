@@ -44,6 +44,12 @@ const font = {
       lineHeight: "25px",
     },
   },
+  text___error: {
+    fontSize: "10px",
+    lineHeight: "10px",
+  },
+
+  text___highlight: colors.lightCoral,
 };
 
 const breakPoints = {

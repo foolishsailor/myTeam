@@ -39,6 +39,10 @@ const StyledSpan = styled.span`
   color: ${({ theme }) => theme.colors.raptureBlue};
 `;
 
+const HighlightSpan = styled.span`
+  color: ${({ theme }) => theme.font.text___highlight};
+`;
+
 const TopSection = styled(Section)`
   background-color: ${({ theme }) => theme.colors.sacStateGreen};
 `;
@@ -87,4 +91,5 @@ export {
   StyledH2,
   StyledBottomH2,
   StyledSpan,
+  HighlightSpan,
 };

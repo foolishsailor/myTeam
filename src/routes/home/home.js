@@ -11,6 +11,7 @@ import {
   StyledH2,
   StyledBottomH2,
   StyledSpan,
+  HighlightSpan,
 } from "./homeStyles";
 import HeaderCard from "../../components/cards/headerCard";
 import BackgroundIcon from "../../components/backgroundIcon";
@@ -87,7 +88,7 @@ const Home = () => {
       <StyledHeader inline>
         <StyledCard>
           <StyledCardTitle>
-            Find the best <span className='text---highlight'>talent</span>
+            Find the best <HighlightSpan>talent</HighlightSpan>
           </StyledCardTitle>
         </StyledCard>
         <HeaderCard highlight='primary' hideHighlight={"tablet"}>

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "../button";
-import Section from "../section";
-import backgroundImage from "../../assets/bg-pattern-home-6-about-5.svg";
+import Button from "./button";
+import Section from "./section";
+import backgroundImage from "../assets/bg-pattern-home-6-about-5.svg";
 
 const TopContainer = styled(Section)`
   align-items: center;
@@ -48,7 +49,9 @@ const Bottom = () => {
   return (
     <TopContainer inline>
       <StyledH2>Ready to get started?</StyledH2>
-      <Button variant='sacStateGreen'>contact us</Button>
+      <Link to='./contact'>
+        <Button variant='sacStateGreen'>contact us</Button>
+      </Link>
     </TopContainer>
   );
 };

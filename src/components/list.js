@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundImage from "../backgroundImage";
+import BackgroundImage from "./backgroundImage";
 
 const ListItem = styled.li`
   display: flex;

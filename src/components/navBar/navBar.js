@@ -14,6 +14,7 @@ const NavBar = () => {
   const handleChange = (props) => {
     const mainContainer = document.getElementById("content");
     const sideMenu = document.getElementById("sidemenu");
+    const sidemenu__overlay = document.getElementById("sideMenu__overlay");
 
     props.target.checked
       ? (sideMenu.style.transform = "translateX(-255px)")
@@ -22,6 +23,10 @@ const NavBar = () => {
     props.target.checked
       ? (mainContainer.style.height = "100vh")
       : (mainContainer.style.height = "inherit");
+
+    props.target.checked
+      ? (sidemenu__overlay.style.backgroundColor = "rgba(0,0,0,0.5)")
+      : (sidemenu__overlay.style.backgroundColor = "rgba(0,0,0,0)");
   };
 
   return (
