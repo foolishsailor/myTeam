@@ -39,7 +39,7 @@ const TestimonialCard = ({ item }) => {
   console.log("item", item);
   return (
     <Card>
-      <QuoteIcon width={67} height={56} src={QuoteImage} />
+      <QuoteIcon width={67} height={56} src={QuoteImage} alt='' />
       <BodySmall>{item.quote}</BodySmall>
       <StyledH3>{item.name}</StyledH3>
       <Title>{item.title}</Title>
