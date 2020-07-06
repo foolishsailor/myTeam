@@ -28,7 +28,12 @@ const List = ({ list, variant }) => {
     return (
       <ListItem key={i}>
         <div style={{ marginRight: 20 }}>
-          <BackgroundImage width={72} height={72} src={item.image} />
+          <BackgroundImage
+            width={72}
+            height={72}
+            src={item.image}
+            alt={item.title}
+          />
         </div>
         <div>
           <StyledH3 variant={variant}>{item.title}</StyledH3>

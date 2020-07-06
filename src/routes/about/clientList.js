@@ -16,6 +16,8 @@ const ClientList = [
   guardianLogo,
   techRadarLogo,
   gadgetsNow,
-].map((item, i) => <ClientImage height={25} src={item} key={i} />);
+].map((item, i) => (
+  <ClientImage height={25} src={item} key={i} alt='clients' />
+));
 
 export default ClientList;

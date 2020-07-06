@@ -28,7 +28,7 @@ const TeamCard = ({ director }) => {
       <Quote>
         {director.quote}
         <SocialImageContainer>
-          <SocialImageList list={socialImages} />
+          <SocialImageList list={socialImages} alt={director.name} />
         </SocialImageContainer>
       </Quote>
     </StyledCard>

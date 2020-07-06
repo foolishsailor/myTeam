@@ -104,11 +104,12 @@ const Home = () => {
           width={200}
           height={200}
           src={leftIcon}
+          alt=''
         />
-        <StyledBottomIcon width={358} height={100} src={bottomIcon} />
+        <StyledBottomIcon width={358} height={100} src={bottomIcon} alt='' />
       </StyledHeader>
       <TopSection inline>
-        <TopSectionIcon width={200} height={244} src={topSectionIcon} />
+        <TopSectionIcon width={200} height={244} src={topSectionIcon} alt='' />
         <HeaderCard highlight>
           <StyledH2>
             Build & manage distributed teams like no one else.
@@ -125,6 +126,7 @@ const Home = () => {
           width={147}
           height={100}
           src={testLeftIcon}
+          alt=''
         />
         <BackgroundIcon
           bottom={0}
@@ -132,6 +134,7 @@ const Home = () => {
           width={200}
           height={100}
           src={testRightIcon}
+          alt=''
         />
         <StyledBottomH2>
           Delivering real results for top companies. Some of our{" "}

@@ -13,7 +13,12 @@ const nav = ({ inline, header }) => {
   return (
     <Container inline={inline}>
       <LogoLink header={header} to='/'>
-        <BackgroundImage width={160} height={40} src={myTeamLogo} />
+        <BackgroundImage
+          width={160}
+          height={40}
+          src={myTeamLogo}
+          alt='myTeam'
+        />
       </LogoLink>
 
       <NavList header={header}>

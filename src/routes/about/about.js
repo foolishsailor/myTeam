@@ -40,13 +40,19 @@ const About = () => {
         </HeaderCard>
       </Section>
       <Main inline variant={"deepJungleGreen"}>
-        <DirectorLeftIcon width={200} height={200} src={directorsLeftIcon} />
+        <DirectorLeftIcon
+          width={200}
+          height={200}
+          src={directorsLeftIcon}
+          alt=''
+        />
         <BackgroundIcon
           width={147}
           height={100}
           right={0}
           bottom={0}
           src={directorsRightIcon}
+          alt=''
         />
         <Title>Meet the directors</Title>
         <CardContainer>{Directors}</CardContainer>
@@ -55,7 +61,12 @@ const About = () => {
       <ClientSection variant={"sacStateGreen"}>
         <Title>Some of our clients</Title>
         <ClientContainer inline>
-          <ClientsLeftIcon width={200} height={244} src={clientsLeftIcon} />
+          <ClientsLeftIcon
+            width={200}
+            height={244}
+            src={clientsLeftIcon}
+            alt=''
+          />
           {ClientList}
         </ClientContainer>
       </ClientSection>
