@@ -26,7 +26,7 @@ const About = () => {
   return (
     <>
       <Section inline>
-        <RightIcon width={200} height={200} url={rightIcon} />
+        <RightIcon width={200} height={200} src={rightIcon} />
         <HeaderCard style={{ flexGrow: 0.5 }}>
           <CardTitle>About</CardTitle>
         </HeaderCard>
@@ -40,13 +40,13 @@ const About = () => {
         </HeaderCard>
       </Section>
       <Main inline variant={"deepJungleGreen"}>
-        <DirectorLeftIcon width={200} height={200} url={directorsLeftIcon} />
+        <DirectorLeftIcon width={200} height={200} src={directorsLeftIcon} />
         <BackgroundIcon
           width={147}
           height={100}
           right={0}
           bottom={0}
-          url={directorsRightIcon}
+          src={directorsRightIcon}
         />
         <Title>Meet the directors</Title>
         <CardContainer>{Directors}</CardContainer>
@@ -55,7 +55,7 @@ const About = () => {
       <ClientSection variant={"sacStateGreen"}>
         <Title>Some of our clients</Title>
         <ClientContainer inline>
-          <ClientsLeftIcon width={200} height={244} url={clientsLeftIcon} />
+          <ClientsLeftIcon width={200} height={244} src={clientsLeftIcon} />
           {ClientList}
         </ClientContainer>
       </ClientSection>

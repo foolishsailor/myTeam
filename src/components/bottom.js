@@ -49,9 +49,9 @@ const Bottom = () => {
   return (
     <TopContainer inline>
       <StyledH2>Ready to get started?</StyledH2>
-      <Link to='./contact'>
-        <Button variant='sacStateGreen'>contact us</Button>
-      </Link>
+      <Button component={Link} to='./contact' variant='sacStateGreen'>
+        contact us
+      </Button>
     </TopContainer>
   );
 };

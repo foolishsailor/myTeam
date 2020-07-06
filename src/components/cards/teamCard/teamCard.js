@@ -22,7 +22,7 @@ const TeamCard = ({ director }) => {
   return (
     <StyledCard>
       <Button></Button>
-      <DirectorImage round width={96} height={96} url={director.image} />
+      <DirectorImage round width={96} height={96} src={director.image} />
       <DirectorName>{director.name}</DirectorName>
       <JobTitle>{director.title}</JobTitle>
       <Quote>

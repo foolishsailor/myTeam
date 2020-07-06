@@ -72,7 +72,7 @@ const SideMenu = () => {
           right={-100}
           width={200}
           height={200}
-          url={backgroundIcon}
+          src={backgroundIcon}
         />
       </StyledAside>
     </>

@@ -39,11 +39,11 @@ const TestimonialCard = ({ item }) => {
   console.log("item", item);
   return (
     <Card>
-      <QuoteIcon width={67} height={56} url={QuoteImage} />
+      <QuoteIcon width={67} height={56} src={QuoteImage} />
       <BodySmall>{item.quote}</BodySmall>
       <StyledH3>{item.name}</StyledH3>
       <Title>{item.title}</Title>
-      <Avatar round url={item.image} width={62} height={62} alt={item.name} />
+      <Avatar round src={item.image} width={62} height={62} alt={item.name} />
     </Card>
   );
 };
