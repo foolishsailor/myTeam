@@ -15,6 +15,7 @@ const StyledCardContainer = styled(CardContainer)`
 
 const StyledCard = styled(HeaderCard)`
   margin-right: 140px;
+  flex: 1.5;
 `;
 
 const StyledHeader = styled(Section)`
